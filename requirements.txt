@@ -1,0 +1,2 @@
+beautifulsoup4==4.9.1
+pyhiccup==0.1

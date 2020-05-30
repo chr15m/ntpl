@@ -1,0 +1,5 @@
+.*.swp
+.python-version
+.envrc
+.direnv
+__pycache__
