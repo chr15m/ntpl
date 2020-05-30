@@ -3,3 +3,6 @@
 .envrc
 .direnv
 __pycache__
+*.egg-info
+build
+dist
