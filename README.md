@@ -18,7 +18,7 @@ To manipulate an existing HTML document, you pass a string containing `html` int
 
 If you're writing a back end web service you can use this library to modify pure HTML templates on the server side and then pass the result back to the browser directly in the HTTP response.
 
-Inspired by Clojure's [Enlive](https://github.com/cgrand/enlive) and [Hiccup](https://github.com/weavejester/hiccup), this library uses [pyhiccup](https://github.com/nbessi/pyhiccup) and [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/) to do it's work.
+Inspired by Clojure's [Enlive](https://github.com/cgrand/enlive) and [Hiccup](https://github.com/weavejester/hiccup), this library uses [pyhiccup](https://github.com/nbessi/pyhiccup) and [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/) to do its work.
 
 # Documentation
 
