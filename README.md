@@ -1,5 +1,19 @@
 Un-template is a minimal Python library to manipulate and render HTML without using a templating language. Instead it works on raw HTML and uses Python's native datastructures to build new document fragments. The declarative modification and rendering of an existing HTML document is designed to work like modern front-end libraries such as React and Mithril.
 
+```python
+from ntpl import slurp, replace, replaceWith, render
+
+template = slurp("index.html")
+faqs = markdown(slurp("FAQ.md"))
+
+def faq(request):
+    html = template
+    html = replace(html, "#content-title", "FAQ")
+    html = replace(html, "#content", faqs)
+    html = replaceWith(html, "a#home", render(["a", {"href": "/"}, "home"]))
+    return HttpResponse(html)
+```
+
 To manipulate an existing HTML document, you pass a string containing `html` into the functions `replace`, `remove`, `replaceWith`, and `attr` and then use a CSS-style `selector` to choose the HTML elements that you want to manipulate. You generate HTML components from scratch by passing Python datastructures to the declarative `render` function. You can combine the manipulation and rendering functions to update an existing HTML document with new content.
 
 If you're writing a back end web service you can use this library to modify pure HTML templates on the server side and then pass the result back to the browser directly in the HTTP response.
