@@ -74,4 +74,12 @@ ntpl.replace(t, "ul#users",
 # returns render HTML document with user list items contents replaced
 ```
 
+### Who
+
+Hi, 👋 I'm Chris and I made this.
+
+You can find me online here:
+
+* [@mccrmx](https://twitter.com/mccrmx)
+* [mccormick.cx](https://mccormick.cx/)
 
