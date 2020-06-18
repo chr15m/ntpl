@@ -1,4 +1,6 @@
-Un-template is a minimal Python library to manipulate and render HTML without using a templating language. Instead it works on raw HTML and uses Python's native datastructures to build new document fragments. The declarative modification and rendering of an existing HTML document is designed to work like modern front-end libraries such as React and Mithril.
+A minimal Python library to manipulate and render HTML, without any templating language.
+
+Un-template (`ntpl`) works with plain HTML documents. You use Python datastructures to build new document fragments. The declarative HTML manipulation works like front-end libraries like React and Mithril.
 
 ```python
 from ntpl import slurp, replace, replaceWith, render
@@ -14,9 +16,9 @@ def faq(request):
     return HttpResponse(html)
 ```
 
-To manipulate an existing HTML document, you pass a string containing `html` into the functions `replace`, `remove`, `replaceWith`, and `attr` and then use a CSS-style `selector` to choose the HTML elements that you want to manipulate. You generate HTML components from scratch by passing Python datastructures to the declarative `render` function. You can combine the manipulation and rendering functions to update an existing HTML document with new content.
+To modify an existing HTML document, you pass a string containing `html` into the functions `replace`, `remove`, `replaceWith`, and `attr` and then use a CSS-style `selector` to choose the HTML elements that you want to modify. You generate HTML components from scratch by passing Python datastructures to the declarative `render` function. You can combine the manipulation and rendering functions to update an existing HTML document with new content.
 
-If you're writing a back end web service you can use this library to modify pure HTML templates on the server side and then pass the result back to the browser directly in the HTTP response.
+If you're writing a back end web service you can use this library to modify pure HTML files on the server side and then pass the result back to the browser directly in the HTTP response.
 
 Inspired by Clojure's [Enlive](https://github.com/cgrand/enlive) and [Hiccup](https://github.com/weavejester/hiccup), this library uses [pyhiccup](https://github.com/nbessi/pyhiccup) and [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/) to do its work.
 
