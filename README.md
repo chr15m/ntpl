@@ -22,6 +22,8 @@ If you're writing a back end web service you can use this library to modify pure
 
 Inspired by Clojure's [Enlive](https://github.com/cgrand/enlive) and [Hiccup](https://github.com/weavejester/hiccup), this library uses [pyhiccup](https://github.com/nbessi/pyhiccup) and [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/) to do its work.
 
+This library works in Python 2.7 and higher.
+
 # Documentation
 
 Generated from `pydoc ntpl`.
