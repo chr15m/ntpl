@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="ntpl",
-    version="0.0.2",
+    version="0.0.3",
     author="Chris McCormick",
     author_email="chris@mccormick.cx",
     packages=["ntpl"],
