@@ -1,9 +1,15 @@
+import sys
+if sys.version_info[0] == 2:
+    from io import open
+    string_type = basestring
+else:
+    string_type = str
 from bs4 import BeautifulSoup as bs
 from pyhiccup.core import convert as render
 
 def _idempotent_bs(html):
     "Idempotent conversion function for str or BeautifulSoup to BeautifulSoup object."
-    return bs(html, 'html.parser') if type(html) == str else html
+    return bs(html, 'html.parser') if isinstance(html, string_type) else html
 
 def replace(html, selector, new):
     "Replace innerHTML of html elements that match selector with new."
